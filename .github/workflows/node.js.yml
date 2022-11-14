@@ -1,27 +1,25 @@
-on: ["push", "pull_request"]
-
 name: Node.js CI
 
+on:
+  [push]
+
 jobs:
-
   build:
-    name: Build
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
     steps:
-
-    - uses: actions/checkout@v1
-
-    - name: Use Node.js 14.x
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
       with:
-        node-version: 14.x
-
-    - name: npm install, make test-coverage
-      run: |
-        npm install
-        make test-coverage
-
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run test-coverage
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
-        github-token: ${{ secrets.TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}

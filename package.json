@@ -1,0 +1,14 @@
+{
+  "name": "E-commerce_store_testing",
+  "version": "1.0.0",
+  "description": "Source code and unit tests for the E-commerce store",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no tests are implemented yet \" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

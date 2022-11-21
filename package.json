@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "nyc mocha --exit",
-    "coverage": "nyc --reporter=lcov npm test"
+    "test": "mocha --exit",
+    "coverage": "c8 node ../COMP.SE.200_2022-E_commerce_store_testing/test/capitalize.test.js --reporter=lcov npm test"
   },
   "author": "",
   "license": "ISC",

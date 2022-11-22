@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha --exit",
-    "coverage": "c8 mocha ../COMP.SE.200_2022-E_commerce_store_testing/test/add.test.js"
+    "coverage": "c8 --all --include=src --reporter=lcov mocha"
   },
   "author": "",
   "license": "ISC",

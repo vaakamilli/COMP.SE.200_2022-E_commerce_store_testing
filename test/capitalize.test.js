@@ -18,10 +18,4 @@ describe("Capitalize", () => {
     it("Converts the character of `j` to upper case", () =>{
         expect(capitalize('j')).to.equal('J')
     });
-    it("Converts nothing", () =>{
-        expect(capitalize()).to.equal('Undefined')
-    });
-    it("Converts a boolean type instead of a string", () =>{
-        expect(capitalize(true)).to.throw(TypeError)
-    });
    })

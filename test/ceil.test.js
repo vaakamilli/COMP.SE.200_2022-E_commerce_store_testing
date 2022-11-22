@@ -18,10 +18,4 @@ describe("Ceil", () => {
     it("Round 0 up to the next biggest integer", () =>{
         expect(ceil(0)).to.equal(0)
     });
-    it("Round nothing", () =>{
-        expect(ceil()).to.deep.equal(NaN)
-    });
-    it("Round a boolean value", () =>{
-        expect(ceil(false, 2)).to.throw(TypeError)
-    });
    })

@@ -21,10 +21,4 @@ describe("Add", () => {
     it("Add two negative floating type numbers together", () =>{
         expect(add(-2.2, -2.2)).to.equal(-4.4)
     });
-    it("Add nothing", () =>{
-        expect(add()).to.equal(undefined)
-    });
-    it("Add two boolean values together", () =>{
-        expect(add(false, false)).to.equal(TypeError)
-    });
    })

@@ -10,7 +10,7 @@ jobs:
   build:
 
     # run build on latest ubuntu
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     # this will check out the current branch (https://github.com/actions/checkout#Push-a-commit-using-the-built-in-token)
@@ -25,10 +25,11 @@ jobs:
     - run: npm ci
     # build the project if necessary
     - run: npm run build --if-present
-    # finally run the tests
-    - run: npm run coverage
       env:
         CI: false
+        
+    # finally run the tests
+    - run: npm run coverage
 
     # Save coverage report in Coveralls
     - name: Coveralls

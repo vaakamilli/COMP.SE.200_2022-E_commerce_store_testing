@@ -27,6 +27,8 @@ jobs:
     - run: npm run build --if-present
     # finally run the tests
     - run: npm run coverage
+      env:
+        CI: false
 
     # Save coverage report in Coveralls
     - name: Coveralls
